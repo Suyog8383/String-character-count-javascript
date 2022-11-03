@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Input - AAAABBBCCDAABB Output - A4B3C2D1A2B2
+  </body>
+</html>
+<script>
+  /*1.loop the string
+    2.store 1st charcter in new variable.
+    3.check with charcter store in new variable until charcter same in variable.
+    4.if not same then store in new variable with character and count*/
+
+  let name = "AAAABBBCCDAABB";
+  let store = "";
+  let final = "";
+  let count = 1;
+  for (let i = 0; i < name.length; i++) {
+    store = name[i];
+    if (store === name[i + 1]) {
+      count++;
+    } else {
+      final = final + name[i] + "" + count;
+      count = 1;
+    }
+  }
+  console.log("@SN ", final);
+</script>
